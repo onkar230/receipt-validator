@@ -211,12 +211,4 @@ app.get('/health', (req, res) => {
   res.json({ status: 'healthy', timestamp: new Date().toISOString() });
 });
 
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => {
-  console.log(`Receipt validation server running on port ${PORT}`);
-  console.log(`Production URL: ${PRODUCTION_URL}`);
-  console.log(`Sandbox URL: ${SANDBOX_URL}`);
-});
-
-module.exports = { validateReceipt, hasActiveSubscription };
+module.exports = app; 
