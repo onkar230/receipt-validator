@@ -212,4 +212,4 @@ app.get('/health', (req, res) => {
 });
 
 const serverless = require('serverless-http');
-module.exports.handler = serverless(app);
+module.exports = serverless(app);
